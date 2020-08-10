@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'QuizePages/anime.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,9 +19,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key}) : super(key: key);
 
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,6 +105,13 @@ class MyHomePage extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AnimePage()),
+                            );
+                          },
                         ),
                       ),
                     ),
