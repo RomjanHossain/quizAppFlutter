@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'QuizePages/anime.dart';
+import 'QuizePages/animeQuiz/anime.dart';
 
 void main() {
   runApp(MyApp());
