@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'QuizePages/animeQuiz/anime.dart';
+import 'QuizePages/gk/gk.dart';
+import 'QuizePages/chemistry/chemistry.dart';
+import 'QuizePages/math/math.dart';
+import 'QuizePages/tech/tech.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -130,6 +132,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.white,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Chemistry()),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -148,6 +157,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.white,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => gkPage()),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -161,11 +176,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.indigo,
                           ),
                           title: Text(
-                            'Mathematics',
+                            'World War 2',
                             style: TextStyle(
                               color: Colors.white,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => mathPage()),
+                            );
+                          },
                         ),
                       ),
                     ),
@@ -184,6 +206,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.white,
                             ),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => techPage()),
+                            );
+                          },
                         ),
                       ),
                     ),

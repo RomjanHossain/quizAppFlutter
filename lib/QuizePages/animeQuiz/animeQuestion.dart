@@ -2,6 +2,7 @@ import '../question.dart';
 
 class AnimeQuestion {
   int count = 0;
+  bool gameOn = true;
   List<Question> _questions = [
     Question(
         'Clefairy was intended to be Ash’s starting Pokémon in the pilot episode of the cartoon',
@@ -19,12 +20,12 @@ class AnimeQuestion {
         2), //Being run over by a truck
     Question(
         'Who is the main character with yellow hair in the anime Naruto?', 2),
-    Question(
-        'The anime Attack on Titan was directed by Tetsurō Araki, the same person who directed the anime Highschool of the Dead',
-        2), //true
-    Question(
-        'Throughout the entirety of “Dragon Ball Z”, Goku only kills two characters: a miniboss named Yakon and Kid Buu',
-        2), // kid Buu
+    // Question(
+    //     'The anime Attack on Titan was directed by Tetsurō Araki, the same person who directed the anime Highschool of the Dead',
+    //     2), //true
+    // Question(
+    //     'Throughout the entirety of “Dragon Ball Z”, Goku only kills two characters: a miniboss named Yakon and Kid Buu',
+    //     2), // kid Buu
     Question('What is the name of the corgi in Cowboy Bebop?', 2), // Einstein
     Question(
         'In Dragon Ball Z, who was the first character to go Super Saiyan 2?',
@@ -32,9 +33,9 @@ class AnimeQuestion {
     Question(
         'What is the name of the main character of the anime “One-Punch Man”?',
         2), //Saitama
-    Question(
-        'The name of Junko Enoshima’s imposter at the beginning of Danganronpa: Trigger Happy Havoc is?',
-        2), // Mukuro Ikusaba
+    // Question(
+    //     'The name of Junko Enoshima’s imposter at the beginning of Danganronpa: Trigger Happy Havoc is?',
+    //     2), // Mukuro Ikusaba
     Question(
         'In the 2012 animated film “Wolf Children”, what are the names of the wolf children?',
         2), //Ame and Yuki
@@ -54,5 +55,13 @@ class AnimeQuestion {
 
   int index() {
     return count + 1;
+  }
+
+  bool getAlert() {
+    if (count == _questions.length) {
+      count = 0;
+      gameOn = false;
+    }
+    return gameOn;
   }
 }
