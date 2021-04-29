@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'QuizePages/animeQuiz/anime.dart';
 import 'QuizePages/gk/gk.dart';
 import 'QuizePages/chemistry/chemistry.dart';
-import 'QuizePages/math/math.dart';
+import 'QuizePages/ww2/ww2.dart';
 import 'QuizePages/tech/tech.dart';
 
 void main() => runApp(MyApp());
